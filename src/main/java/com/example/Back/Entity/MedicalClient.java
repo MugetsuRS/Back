@@ -62,8 +62,7 @@ public class MedicalClient {
         if(comments!= null){
             comments.forEach(a->{
                 a.setMedicalClient(this);
-                    }
-            );
+                    });
         }
         this.comments = comments;
     }
