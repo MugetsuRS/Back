@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    properties.hibernate.temp.use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: create
+    properties:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/medicalclient
+    username: postgres
+    password: 524680
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
+
+server:
+  port: 9999
