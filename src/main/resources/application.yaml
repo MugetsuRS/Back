@@ -6,7 +6,7 @@ spring:
       ddl-auto: create
     properties:
   datasource:
-    url: jdbc:postgresql://localhost:5432/medicalclient
+    url: jdbc:postgresql://localhost:5432/medical
     username: postgres
     password: 524680
     driver-class-name: org.postgresql.Driver
