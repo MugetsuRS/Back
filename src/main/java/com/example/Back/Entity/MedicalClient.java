@@ -26,26 +26,15 @@ public class MedicalClient {
 //    private String age;
 
     //bi-directional (inverse-end)
-    @OneToMany(mappedBy = "medicalClient",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List <Comment> comments;
+    @OneToMany(mappedBy = "medicalClient", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Comment> comments;
 
-    public void addcomment (final Comment newcomment){
+    public void addcomment(final Comment newcomment) {
         comments.add(newcomment);
     }
 
     public Integer getId() {
         return id;
-    }
-
-    public MedicalClient(String name, String surrname, String dayofbirth, String country, String state, String address, String sex, List<Comment> comments) {
-        this.name = name;
-        this.surrname = surrname;
-        this.dayofbirth = dayofbirth;
-        this.country = country;
-        this.state = state;
-        this.address = address;
-        this.sex = sex;
-        this.comments = comments;
     }
 
     public String getDayofbirth() {
@@ -109,10 +98,10 @@ public class MedicalClient {
     }
 
     public void setComments(List<Comment> comments) {
-        if(comments!= null){
-            comments.forEach(a->{
+        if (comments != null) {
+            comments.forEach(a -> {
                 a.setMedicalClient(this);
-                    });
+            });
         }
         this.comments = comments;
     }

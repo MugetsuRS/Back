@@ -20,8 +20,8 @@ public class Comment {
     private String dayofadditing;
 
     //bi-directional (owner)
-    @ManyToOne(fetch = FetchType.EAGER,cascade = {
-            CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {
+            CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH
     })
     @JoinColumn(name = "medicalclient_id")
     private MedicalClient medicalClient;
