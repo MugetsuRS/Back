@@ -26,6 +26,7 @@ public class Comment {
     @JoinColumn(name = "medicalclient_id")
     private MedicalClient medicalClient;
 
+
     public Integer getId() {
         return id;
     }
