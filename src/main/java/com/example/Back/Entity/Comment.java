@@ -13,8 +13,9 @@ import java.util.Set;
 @Builder
 @Entity
 public class Comment {
-    @GeneratedValue
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String commentary;
     private String dayofadditing;
@@ -56,13 +57,5 @@ public class Comment {
         this.medicalClient = medicalClient;
     }
 
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", commentary='" + commentary + '\'' +
-                ", dayofadditing='" + dayofadditing + '\'' +
-                ", medicalClient=" + medicalClient +
-                '}';
-    }
+
 }
